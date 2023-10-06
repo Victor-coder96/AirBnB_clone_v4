@@ -35,23 +35,46 @@ button:hover {
     margin-bottom: 0;
     font-weight: 600;
 }
-.filters h4 {
+.filters h4, .locations h4 {
     margin-top: 0;
     font-weight: 400;
     font-size: 14px;
-	height: 100%;
-	margin-left: 40px;
-	white-space: nowrap;
+		height: 100%;
+		margin-left: 40px;
+		overflow: hidden;
+		white-space: nowrap;
     text-overflow: ellipsis;
+		padding-bottom: 10px;
 }
+
 .locations {
     height: 100%;
     width: 25%;
     border-right: 1px solid #DDDDDD;
 }
+
 .amenities {
     height: 100%;
     width: 25%;
+}
+
+.locations h4 {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 1rem;
+}
+
+.locations h4 span:first-child{
+	font-weight: 600;
+	font-style: italic;
+	margin: 1px;
+}
+
+.states_list, .cities_list {
+	margin-right: 10px;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .popover {
@@ -99,9 +122,11 @@ button:hover {
 }
 
 .popover ul h2{
+	display: inline-block;
     margin-top: 1.5%;
     margin-bottom: 5%;
     margin-left: 0px;
+	height: 100%;
 }
 
 .amenities:hover .popover,

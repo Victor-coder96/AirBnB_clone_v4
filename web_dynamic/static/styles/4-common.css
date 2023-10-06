@@ -9,3 +9,42 @@ body .container {
     max-width: 1000px;
     margin: 30px auto;
 }
+
+.tooltip {
+  position: relative;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  display: inline-block;
+	text-decoration: underline dotted black;
+	cursor: help;
+	overflow: visible;
+}
+
+.tooltip .tooltiptext {
+	display: none;
+  visibility: hidden;
+	min-width: max-content;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  background-color: #eee;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0px 4px;
+	font-weight: 100;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+  z-index: 1;
+}
+
+.tooltip:hover {
+	text-decoration: none;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+	display: inherit;
+	text-decoration: none;
+	font-style: italic;
+	font-weight: normal;
+}
